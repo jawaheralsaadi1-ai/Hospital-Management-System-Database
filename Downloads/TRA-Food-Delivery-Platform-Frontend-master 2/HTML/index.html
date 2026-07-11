@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codeline Eats Mockup Preview</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="container app-header__wrapper">
+            <div class="app-header__brand">
+                <span class="app-header__logo-icon">
+                    <img src="logo.png" alt="Codeline Eats Logo" class="brand-logo-img">
+                </span>
+                <h1 class="app-header__title">Codeline Eats</h1>
+            </div>
+            <div class="header-search-box">
+                <span class="search-icon">🔍</span>
+                <input id="search-input" type="text" class="header-search-input" placeholder="Search restaurants...">
+            </div>
+            <div class="app-header__meta">
+                <div class="location-badge">📍 Al Khuwair</div>
+                <div class="user-avatar">👤</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="filters-container">
+            <div class="filters-row">
+                <button class="chip chip--active" data-cuisine="All">All</button>
+                <button class="chip" data-cuisine="Arabic">Arabic</button>
+                <button class="chip" data-cuisine="Indian">Indian</button>
+                <button class="chip" data-cuisine="Italian">Italian</button>
+                <button class="chip" data-cuisine="Burgers">Burgers</button>
+                <button class="chip" data-cuisine="Japanese">Japanese</button>
+                <button class="chip" data-cuisine="Healthy">Healthy</button>
+            </div>
+        </section>
+
+        <section id="restaurant-grid" class="restaurant-grid">
+            
+            <article class="restaurant-card" data-cuisine="Arabic" data-id="1">
+                <div class="restaurant-card__cover pattern-coral">
+                    <span class="status-badge status-badge--open">Open</span>
+                </div>
+                <div class="restaurant-card__body">
+                    <div class="title-row">
+                        <h3>Al Boom</h3>
+                        <span class="rating">★ 4.6</span>
+                    </div>
+                    <div class="cuisine-tag">Arabic</div>
+                    <div class="metrics-row">
+                        <div class="metric-field"><span class="metric-label">Delivery</span><span class="metric-value">0.500</span></div>
+                        <div class="metric-field"><span class="metric-label">Min</span><span class="metric-value">2.000</span></div>
+                    </div>
+                    <button class="btn btn--primary" data-id="1">View Menu</button>
+                </div>
+            </article>
+
+            <article class="restaurant-card" data-cuisine="Indian" data-id="2">
+                <div class="restaurant-card__cover pattern-blue">
+                    <span class="status-badge status-badge--open">Open</span>
+                </div>
+                <div class="restaurant-card__body">
+                    <div class="title-row">
+                        <h3>Spice Hub</h3>
+                        <span class="rating">★ 4.3</span>
+                    </div>
+                    <div class="cuisine-tag">Indian</div>
+                    <div class="metrics-row">
+                        <div class="metric-field"><span class="metric-label">Delivery</span><span class="metric-value">0.300</span></div>
+                        <div class="metric-field"><span class="metric-label">Min</span><span class="metric-value">1.500</span></div>
+                    </div>
+                    <button class="btn btn--primary" data-id="2">View Menu</button>
+                </div>
+            </article>
+
+            <article class="restaurant-card" data-cuisine="Italian" data-id="3">
+                <div class="restaurant-card__cover pattern-coral">
+                    <span class="status-badge status-badge--open">Open</span>
+                </div>
+                <div class="restaurant-card__body">
+                    <div class="title-row">
+                        <h3>Bella Via</h3>
+                        <span class="rating">★ 4.8</span>
+                    </div>
+                    <div class="cuisine-tag">Italian</div>
+                    <div class="metrics-row">
+                        <div class="metric-field"><span class="metric-label">Delivery</span><span class="metric-value">0.700</span></div>
+                        <div class="metric-field"><span class="metric-label">Min</span><span class="metric-value">3.000</span></div>
+                    </div>
+                    <button class="btn btn--primary" data-id="3">View Menu</button>
+                </div>
+            </article>
+
+            <article class="restaurant-card" data-cuisine="Burgers" data-id="4">
+                <div class="restaurant-card__cover pattern-tan">
+                    <span class="status-badge status-badge--open">Open</span>
+                </div>
+                <div class="restaurant-card__body">
+                    <div class="title-row">
+                        <h3>Burger Yard</h3>
+                        <span class="rating">★ 4.1</span>
+                    </div>
+                    <div class="cuisine-tag">Burgers</div>
+                    <div class="metrics-row">
+                        <div class="metric-field"><span class="metric-label">Delivery</span><span class="metric-value">0.400</span></div>
+                        <div class="metric-field"><span class="metric-label">Min</span><span class="metric-value">2.000</span></div>
+                    </div>
+                    <button class="btn btn--primary" data-id="4">View Menu</button>
+                </div>
+            </article>
+
+            <article class="restaurant-card" data-cuisine="Japanese" data-id="5">
+                <div class="restaurant-card__cover pattern-mint">
+                    <span class="status-badge status-badge--paused">Paused</span>
+                </div>
+                <div class="restaurant-card__body">
+                    <div class="title-row">
+                        <h3>Sushi Sen</h3>
+                        <span class="rating">★ 4.7</span>
+                    </div>
+                    <div class="cuisine-tag">Japanese</div>
+                    <div class="metrics-row">
+                        <div class="metric-field"><span class="metric-label">Delivery</span><span class="metric-value">0.900</span></div>
+                        <div class="metric-field"><span class="metric-label">Min</span><span class="metric-value">4.000</span></div>
+                    </div>
+                    <button class="btn btn--disabled" disabled>Paused</button>
+                </div>
+            </article>
+
+            <article class="restaurant-card" data-cuisine="Healthy" data-id="6">
+                <div class="restaurant-card__cover pattern-green">
+                    <span class="status-badge status-badge--open">Open</span>
+                </div>
+                <div class="restaurant-card__body">
+                    <div class="title-row">
+                        <h3>Green Bowl</h3>
+                        <span class="rating">★ 4.4</span>
+                    </div>
+                    <div class="cuisine-tag">Healthy</div>
+                    <div class="metrics-row">
+                        <div class="metric-field"><span class="metric-label">Delivery</span><span class="metric-value">0.350</span></div>
+                        <div class="metric-field"><span class="metric-label">Min</span><span class="metric-value">1.000</span></div>
+                    </div>
+                    <button class="btn btn--primary" data-id="6">View Menu</button>
+                </div>
+            </article>
+        </section>
+    </div>
+
+</body>
+</html>
